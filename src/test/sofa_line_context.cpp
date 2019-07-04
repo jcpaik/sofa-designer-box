@@ -113,7 +113,7 @@ TEST_CASE( "Basic functionality of SofaLineContext", "[SofaLineContext]" ) {
     test_ctx(ctx4, 0.2);
 }
 
-TEST_CASE( "Heavy test on SofaLineContext", "[SofaLineContext]" ) {
+TEST_CASE( "Automated stress test on SofaLineContext", "[SofaLineContext]" ) {
     std::vector<mpq_class> slopes;
     mpq_class s_min = -5_mpq, s_max = +6_mpq;
     std::size_t s_n = 10;

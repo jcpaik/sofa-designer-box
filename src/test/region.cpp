@@ -181,13 +181,13 @@ TEST_CASE( "Initialize and run a HalfPlaneRegion", "[VanillaLineContext][HalfPla
     REQUIRE(r5.contains_intersection(0, 7));
     REQUIRE(!r5.contains_intersection(0, 6));
 
-    // Here goes a small mountain to climb
     check_eq(r5.intersection(line_ids), {
         {5, ~short(3), ~short(0), ~short(7), 1},
     });
 
-    // Another mountain (easier as we climbed one before)
-    // Not actually - found couple bugs using this
+    // Found couple bugs using this
+    // This test have two polygons cut out, and one edge of polygon
+    // is aligned to the cutting line
     HalfPlaneRegion rn2(ctx, ~short(2));
     check_eq(rn2.intersection(line_ids), {
         {~short(2), ~short(7), 1, 5},
@@ -292,7 +292,6 @@ TEST_CASE(
 
      */
 
-    // Here goes another mountain to climb
     UnionOfTwoHalfPlanesRegion r50(ctx, 5, 0);
     check_eq(r50.intersection(line_ids), {
         {1, 5, 0, 6, ~4, ~5, ~3, ~0, ~7}
