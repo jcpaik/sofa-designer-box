@@ -1,4 +1,9 @@
-# sofa-designer
+# sofa-designer-box
+
+## Note
+This project is superseded by a new version hosted [here](https://github.com/jcpaik/sofa-designer).
+
+## Description
 Calculates bounds on the moving sofa problem
 
 On either linux or Mac OS X, run make to produce the binary. Compilation requires GMP 6.1.2 library and `-pthread` compilation option enabled.
